@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="resources/ol.css">
+    <link rel="stylesheet" href="resources/ol-ext-master/dist/ol-ext.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://gs.etfarm.ba/assets/bootstrap-3.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://gs.etfarm.ba/assets/js/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="resources/dist/ol.js"></script>
+    <script type="text/javascript" src="resources/ol-ext-master/dist/ol-ext.js"></script>
+
+    <script src="https://gs.etfarm.ba/assets/js/jquery-2.1.4.min.js"></script>
+    <script src="https://gs.etfarm.ba/assets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="https://gs.etfarm.ba/assets/bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="map" class="map"></div>
+
+    <button title="Analysis" id="analize_dugme" class="btn"><i class="fa fa-edit"></i></button>
+    <button title="Delete analysis" id="analiza_brisanje_dugme" onclick="dugme_open_analiza_brisanje()" class="btn"><i
+            class="fa fa-remove"></i></button>
+
+    <script src="main.js"></script>
+
+    <div class="modal fade" id="analizeModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <b style='font-size:13pt; color: #313131; font-family: "Verdana", Sans-serif;'>Show lakes based on country and area</b>
+                </div>
+
+                <div class="modal-body">
+                    <form id="analize_forma">
+
+
+                        <div class="well well-sm">
+                            <fieldset>
+
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-map-o"
+                                                title="Naziv"></i></span>
+                                        <input type="text" class="form-control" name="naziv" id="naziv"
+                                            style="width: 100%;" placeholder="country name" required></input>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-map-o"
+                                                title="Povrsina"></i></span>
+                                        <input type="text" class="form-control" name="povrsina"
+                                            id="povrsina" style="width: 100%;" placeholder="area in square meters"
+                                            required></input>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+
+                        <div class="well well-sm">
+                            <fieldset>
+                                <button onclick="analize();return false;" name="submit_analize" id="submit_analize"
+                                    value="Пошаљи" class="btn btn-default" title="Analyse" /><i class="fa fa-cog"
+                                    style="color:#ffffff !important"></i></button>
+                                <button type="submit" name="submit_dodaj_analize" id="submit_dodaj_analize"
+                                    value="dodaj" class="btn btn-default" title="Add to map" /><i class="fa fa-globe"
+                                    style="color:#fcfcfc !important"></i></button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal" title="Close"><i
+                                        class="fa fa-close" style="color:#ffffff !important"></i></button>
+                            </fieldset>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

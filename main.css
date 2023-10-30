@@ -1,0 +1,101 @@
+body {
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map {
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#btnPoint {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#btnLine {
+    position: absolute;
+    bottom: 10px;
+    right: 80px;
+}
+
+#btnArea {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#btnEdit {
+    position: absolute;
+    bottom: 10px;
+    right: 80px;
+}
+
+#btnDelete {
+    position: absolute;
+    bottom: 10px;
+    right: 150px;
+}
+
+.btn-active {
+    background-color: #0d47a1 !important;
+}
+
+#pretrazivac-form {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    display: none;
+}
+
+#azuriranje {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    display: none;
+}
+
+#analiza {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    display: none;
+}
+
+#tip_pretrage_dugme {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+
+}
+
+#analize_dugme {
+    position: absolute;
+    bottom: 150px;
+    left: 0px;
+}
+
+#analiza_brisanje_dugme {
+    position: absolute;
+    bottom: 80px;
+    left: 0px;
+}
+
+.btn {
+    background-color: rgb(108, 107, 117);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50px;
+}
+
+.btn:hover {
+    background-color: RoyalBlue;
+}
